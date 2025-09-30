@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA 知識挑戰</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- 遊戲封面頁面 -->
+    <div id="coverPage" class="page active">
+        <div class="cover-container">
+            <div class="cover-content">
+                <h2 class="subtitle">NBA挑戰</h2>
+                <h1 class="main-title">NBA 知識挑戰</h1>
+                <div class="instructions">
+                    <p>每位玩家一次挑戰5題。</p>
+                    <p>題目分為兩種:</p>
+                    <p>猜人物題:依據提示或照片,直接說出球員名字</p>
+                    <p>歷史/紀錄題:提供四個選項,玩家需選擇正確答案。</p>
+                    <p>答對題目可累積獎勵。</p>
+                </div>
+                <button id="startGame" class="start-btn">進入挑戰</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('startGame').addEventListener('click', function() {
+            window.location.href = 'topic.html';
+        });
+    </script>
+</body>
+</html>

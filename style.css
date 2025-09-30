@@ -1,0 +1,413 @@
+/* 全局樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* 頁面切換 */
+.page {
+    display: none;
+    min-height: 100vh;
+    position: relative;
+}
+
+.page.active {
+    display: block;
+}
+
+/* 封面頁面樣式 */
+#coverPage {
+    background: url('1.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#coverPage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(135, 206, 235, 0.3);
+    z-index: 1;
+}
+
+.cover-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+.cover-content {
+    flex: 1;
+    z-index: 2;
+    color: white;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+.main-title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+}
+
+.instructions {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 500px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.instructions p {
+    margin-bottom: 10px;
+}
+
+.start-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 3px solid white;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    backdrop-filter: blur(10px);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.start-btn:hover {
+    background: white;
+    color: #87CEEB;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+/* 遊戲頁面樣式 */
+#gamePage {
+    background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 100%);
+    padding: 20px;
+}
+
+.game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.score, .question-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    width: 20%;
+    transition: width 0.3s ease;
+}
+
+.question-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.question-type {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF6B35;
+    margin-bottom: 20px;
+}
+
+.question-content {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.question-image {
+    margin: 20px 0;
+}
+
+.question-image img {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.answer-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.option-btn {
+    padding: 15px 20px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.option-btn:hover {
+    border-color: #FF6B35;
+    background: #fff5f0;
+    transform: translateY(-2px);
+}
+
+.option-btn.selected {
+    border-color: #FF6B35;
+    background: #FF6B35;
+    color: white;
+}
+
+.input-container {
+    margin: 20px 0;
+}
+
+#playerNameInput {
+    width: 300px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    margin-right: 15px;
+}
+
+.submit-btn {
+    padding: 15px 30px;
+    background: #FF6B35;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+}
+
+.game-controls {
+    text-align: center;
+}
+
+.next-btn, .finish-btn {
+    padding: 15px 40px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+}
+
+.next-btn:hover, .finish-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.finish-btn {
+    background: #FF6B35;
+}
+
+.finish-btn:hover {
+    background: #e55a2b;
+}
+
+/* 結果頁面樣式 */
+#resultPage {
+    background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.result-container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+.result-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.final-score h3 {
+    font-size: 2rem;
+    color: #FF6B35;
+    margin-bottom: 20px;
+}
+
+.score-message {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.score-message.excellent {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.score-message.good {
+    background: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.score-message.average {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.score-message.poor {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.result-details {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.result-details p {
+    margin-bottom: 10px;
+}
+
+.play-again-btn {
+    padding: 15px 40px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.play-again-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+.back-home-btn {
+    padding: 15px 40px;
+    background: #FF6B35;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    margin-left: 15px;
+}
+
+.back-home-btn:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .cover-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .basketball-hoop {
+        margin-top: 30px;
+        transform: scale(0.8);
+    }
+    
+    .main-title {
+        font-size: 2.5rem;
+    }
+    
+    .instructions {
+        font-size: 1rem;
+    }
+    
+    .answer-options {
+        grid-template-columns: 1fr;
+    }
+    
+    #playerNameInput {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

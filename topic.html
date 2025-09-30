@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA 知識挑戰 - 遊戲進行中</title>
+    <link rel="stylesheet" href="topic.css">
+</head>
+<body>
+    <!-- 遊戲進行頁面 -->
+    <div id="gamePage" class="page active">
+        <div class="game-container">
+            <div class="game-header">
+                <div class="score">分數: <span id="currentScore">0</span></div>
+                <div class="question-number">第 <span id="currentQuestion">1</span> 題 / 5</div>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+            
+            <div class="question-container">
+                <div id="questionType" class="question-type"></div>
+                <div id="questionContent" class="question-content"></div>
+                <div id="questionImage" class="question-image"></div>
+                <div id="answerOptions" class="answer-options"></div>
+                <div id="inputContainer" class="input-container" style="display: none;">
+                    <input type="text" id="playerNameInput" placeholder="請輸入球員姓名">
+                    <button id="submitAnswer" class="submit-btn">提交答案</button>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- 結果頁面 -->
+    <div id="resultPage" class="page">
+        <div class="result-container">
+            <h2 class="result-title">挑戰完成！</h2>
+            <div class="result-score">
+                <p class="correct-count">答對 <span id="correctCount">0</span> 題</p>
+            </div>
+            <div class="gift-section">
+                <div class="gift-icon">🎁</div>
+                <p class="gift-title">恭喜獲得</p>
+                <p class="gift-name" id="giftName"></p>
+            </div>
+            <div class="result-buttons">
+                <button id="playAgain" class="play-again-btn">再玩一次</button>
+                <button id="backToHome" class="back-home-btn">回到首頁</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="topic.js"></script>
+</body>
+</html>

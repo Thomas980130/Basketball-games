@@ -1,0 +1,300 @@
+/* 全局樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* 頁面切換 */
+.page {
+    display: none;
+    min-height: 100vh;
+    position: relative;
+}
+
+.page.active {
+    display: block;
+}
+
+/* 遊戲頁面樣式 */
+#gamePage {
+    background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 100%);
+    padding: 20px;
+}
+
+.game-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.score, .question-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: linear-gradient(90deg, #4CAF50, #8BC34A);
+    width: 20%;
+    transition: width 0.3s ease;
+}
+
+.question-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.question-type {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF6B35;
+    margin-bottom: 20px;
+}
+
+.question-content {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.question-image {
+    margin: 20px 0;
+}
+
+.question-image img {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.answer-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.option-btn {
+    padding: 15px 20px;
+    border: 2px solid #ddd;
+    background: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+}
+
+.option-btn:hover {
+    border-color: #FF6B35;
+    background: #fff5f0;
+    transform: translateY(-2px);
+}
+
+.option-btn.selected {
+    border-color: #FF6B35;
+    background: #FF6B35;
+    color: white;
+}
+
+.input-container {
+    margin: 20px 0;
+}
+
+#playerNameInput {
+    width: 300px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    margin-right: 15px;
+}
+
+.submit-btn {
+    padding: 15px 30px;
+    background: #FF6B35;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+}
+
+/* 結果頁面樣式 */
+#resultPage {
+    background: linear-gradient(135deg, #87CEEB 0%, #98D8E8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.result-container {
+    background: white;
+    border-radius: 20px;
+    padding: 50px 40px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    max-width: 500px;
+    width: 100%;
+}
+
+.result-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.result-score {
+    margin-bottom: 40px;
+}
+
+.correct-count {
+    font-size: 2rem;
+    color: #FF6B35;
+    font-weight: bold;
+}
+
+.correct-count span {
+    font-size: 3rem;
+    color: #4CAF50;
+}
+
+.gift-section {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 40px;
+    border: 2px solid #FFB347;
+}
+
+.gift-icon {
+    font-size: 4rem;
+    margin-bottom: 15px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.gift-title {
+    font-size: 1.3rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.gift-name {
+    font-size: 1.8rem;
+    color: #FF6B35;
+    font-weight: bold;
+}
+
+.result-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.play-again-btn {
+    padding: 15px 40px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.play-again-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.back-home-btn {
+    padding: 15px 40px;
+    background: #FF6B35;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.back-home-btn:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 53, 0.3);
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+    .answer-options {
+        grid-template-columns: 1fr;
+    }
+    
+    #playerNameInput {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .input-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back-home-btn {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
