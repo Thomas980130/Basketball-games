@@ -11,7 +11,7 @@
     <div id="gamePage" class="page active">
         <div class="game-container">
             <div class="game-header">
-                <div class="score">分數: <span id="currentScore">0</span></div>
+                <div class="score">答對題數: <span id="currentScore">0</span></div>
                 <div class="question-number">第 <span id="currentQuestion">1</span> 題 / 5</div>
                 <div class="progress-bar">
                     <div class="progress" id="progress"></div>
@@ -35,18 +35,22 @@
     <!-- 結果頁面 -->
     <div id="resultPage" class="page">
         <div class="result-container">
-            <h2 class="result-title">挑戰完成！</h2>
-            <div class="result-score">
-                <p class="correct-count">答對 <span id="correctCount">0</span> 題</p>
-            </div>
-            <div class="gift-section">
-                <div class="gift-icon">🎁</div>
-                <p class="gift-title">恭喜獲得</p>
-                <p class="gift-name" id="giftName"></p>
-            </div>
-            <div class="result-buttons">
-                <button id="playAgain" class="play-again-btn">再玩一次</button>
-                <button id="backToHome" class="back-home-btn">回到首頁</button>
+            <div class="result-card">
+                <h2 class="result-title">挑戰完成！</h2>
+                <div class="score-display">
+                    <span class="score-text">答對題數</span>
+                    <span class="score-number" id="finalScore">0</span>
+                    <span class="score-text">題</span>
+                </div>
+                <div class="gift-section">
+                    <div class="gift-icon">🎁</div>
+                    <div class="gift-text">恭喜獲得</div>
+                    <div class="gift-item" id="giftItem">獎品</div>
+                </div>
+                <div class="result-buttons">
+                    <button id="playAgain" class="btn-play-again">再玩一次</button>
+                    <button id="backToHome" class="btn-back-home">回到首頁</button>
+                </div>
             </div>
         </div>
     </div>

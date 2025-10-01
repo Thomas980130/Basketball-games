@@ -80,6 +80,22 @@ class BasketballGame {
                 answer: 0,
                 correct: 'Chris Paul 克里斯·保羅'
             },
+            {
+                type: 'guess_player',
+                image: 'Victor Wembanyama.jpg',
+                question: '這位法國新秀身高超過7呎，被譽為「外星人」，擁有驚人的臂展和全能技巧，請問他是誰？',
+                options: ['Victor Wembanyama 維克托·文班亞馬', 'Chet Holmgren 切特·霍姆格倫', 'Paolo Banchero 保羅·班凱羅', 'Jabari Smith Jr. 賈巴里·史密斯'],
+                answer: 0,
+                correct: 'Victor Wembanyama 維克托·文班亞馬'
+            },
+            {
+                type: 'guess_player',
+                image: 'zion.jpeg',
+                question: '這位球員以爆發力驚人的扣籃和強壯體格聞名，是2019年選秀狀元，請問他是誰？',
+                options: ['Zion Williamson 錫安·威廉森', 'Ja Morant 賈·莫蘭特', 'RJ Barrett RJ·巴雷特', 'Darius Garland 達里厄斯·加蘭'],
+                answer: 0,
+                correct: 'Zion Williamson 錫安·威廉森'
+            },
             
             // 規則題
             {
@@ -151,6 +167,76 @@ class BasketballGame {
                 options: ['進攻方24秒內未投籃', '防守方24秒內未搶到球', '比賽進行24秒', '球員持球24秒'],
                 answer: 0,
                 correct: '進攻方24秒內未投籃'
+            },
+            {
+                type: 'rules',
+                question: 'NBA比賽中，進攻時球隊必須在幾秒內過半場？',
+                options: ['8秒', '10秒', '12秒', '15秒'],
+                answer: 0,
+                correct: '8秒'
+            },
+            {
+                type: 'rules',
+                question: '「三秒違例」指的是什麼情況？',
+                options: ['進攻球員在禁區停留超過3秒', '防守球員在禁區停留超過3秒', '球員持球超過3秒', '球員運球超過3秒'],
+                answer: 0,
+                correct: '進攻球員在禁區停留超過3秒'
+            },
+            {
+                type: 'rules',
+                question: '球員持球面對防守時，最多可以站立幾秒不能移動？',
+                options: ['5秒', '3秒', '8秒', '10秒'],
+                answer: 0,
+                correct: '5秒'
+            },
+            {
+                type: 'rules',
+                question: '「背後運球」是什麼違例？',
+                options: ['不是違例，是合法動作', '運球時手在球下方', '運球時球過肩', '運球時手在球後方'],
+                answer: 0,
+                correct: '不是違例，是合法動作'
+            },
+            {
+                type: 'rules',
+                question: '球員被犯規但仍投進球，這叫什麼？',
+                options: ['And-1', '技術犯規', '惡意犯規', '進攻犯規'],
+                answer: 0,
+                correct: 'And-1'
+            },
+            {
+                type: 'rules',
+                question: '如果球在邊線或底線外觸地，這叫什麼？',
+                options: ['出界', '違例', '犯規', '失誤'],
+                answer: 0,
+                correct: '出界'
+            },
+            {
+                type: 'rules',
+                question: 'NBA季後賽採取幾戰幾勝制？',
+                options: ['7戰4勝', '5戰3勝', '3戰2勝', '9戰5勝'],
+                answer: 0,
+                correct: '7戰4勝'
+            },
+            {
+                type: 'rules',
+                question: '球員空中接球後落地再投籃，這算幾分？',
+                options: ['2分', '3分', '1分', '不算分'],
+                answer: 0,
+                correct: '2分'
+            },
+            {
+                type: 'rules',
+                question: '當球隊犯規超過限制，對方可獲得幾次罰球？',
+                options: ['2次', '1次', '3次', '4次'],
+                answer: 0,
+                correct: '2次'
+            },
+            {
+                type: 'rules',
+                question: '「跳球」通常發生在什麼情況？',
+                options: ['比賽開始時', '爭球時', '技術犯規時', '惡意犯規時'],
+                answer: 0,
+                correct: '比賽開始時'
             },
             
             // 歷史/紀錄題
@@ -225,6 +311,76 @@ class BasketballGame {
                 options: ['總決賽 (NBA Finals)', '季後賽', '冠軍賽', '決賽圈'],
                 answer: 0,
                 correct: '總決賽 (NBA Finals)'
+            },
+            {
+                type: 'history_record',
+                question: 'NBA歷史上得分王是誰？總得分多少？',
+                options: ['LeBron James 勒布朗·詹姆斯，超過38,000分', 'Kareem Abdul-Jabbar 卡里姆·阿卜杜勒·賈巴爾，38,387分', 'Kobe Bryant 科比·布萊恩特，33,643分', 'Michael Jordan 麥可·喬丹，32,292分'],
+                answer: 0,
+                correct: 'LeBron James 勒布朗·詹姆斯，超過38,000分'
+            },
+            {
+                type: 'history_record',
+                question: 'NBA史上最年輕的MVP球員是誰？',
+                options: ['Derrick Rose 德里克·羅斯', 'LeBron James 勒布朗·詹姆斯', 'Magic Johnson 魔術強森', 'Kobe Bryant 科比·布萊恩特'],
+                answer: 0,
+                correct: 'Derrick Rose 德里克·羅斯'
+            },
+            {
+                type: 'history_record',
+                question: '哪位球星有「黑曼巴」的綽號？',
+                options: ['Kobe Bryant 科比·布萊恩特', 'LeBron James 勒布朗·詹姆斯', 'Michael Jordan 麥可·喬丹', 'Allen Iverson 艾倫·艾佛森'],
+                answer: 0,
+                correct: 'Kobe Bryant 科比·布萊恩特'
+            },
+            {
+                type: 'history_record',
+                question: '哪位球星在季後賽拿下最多三分球？',
+                options: ['Stephen Curry 史蒂芬·柯瑞', 'Ray Allen 雷·艾倫', 'Reggie Miller 雷吉·米勒', 'Klay Thompson 克萊·湯普森'],
+                answer: 0,
+                correct: 'Stephen Curry 史蒂芬·柯瑞'
+            },
+            {
+                type: 'history_record',
+                question: 'NBA總冠軍戒指最多的球員是誰？',
+                options: ['Bill Russell 比爾·羅素，11枚', 'Sam Jones 山姆·瓊斯，10枚', 'Kobe Bryant 科比·布萊恩特，5枚', 'Michael Jordan 麥可·喬丹，6枚'],
+                answer: 0,
+                correct: 'Bill Russell 比爾·羅素，11枚'
+            },
+            {
+                type: 'history_record',
+                question: '哪位球員被稱為「閃電俠」？',
+                options: ['Dwyane Wade 德韋恩·韋德', 'Russell Westbrook 羅素·衛斯特布魯克', 'John Wall 約翰·沃爾', 'Derrick Rose 德里克·羅斯'],
+                answer: 0,
+                correct: 'Dwyane Wade 德韋恩·韋德'
+            },
+            {
+                type: 'history_record',
+                question: '哪支球隊的吉祥物是「灰熊」？',
+                options: ['曼菲斯灰熊', '明尼蘇達灰狼', '丹佛金塊', '猶他爵士'],
+                answer: 0,
+                correct: '曼菲斯灰熊'
+            },
+            {
+                type: 'history_record',
+                question: 'NBA單場三雙紀錄保持者是誰？',
+                options: ['Russell Westbrook 羅素·衛斯特布魯克', 'Magic Johnson 魔術強森', 'LeBron James 勒布朗·詹姆斯', 'Jason Kidd 傑森·基德'],
+                answer: 0,
+                correct: 'Russell Westbrook 羅素·衛斯特布魯克'
+            },
+            {
+                type: 'history_record',
+                question: '哪位球員曾經效力湖人、熱火、騎士三隊都拿過總冠軍？',
+                options: ['LeBron James 勒布朗·詹姆斯', 'Shaquille O\'Neal 俠客·歐尼爾', 'Dennis Rodman 丹尼斯·羅德曼', 'Gary Payton 蓋瑞·裴頓'],
+                answer: 0,
+                correct: 'LeBron James 勒布朗·詹姆斯'
+            },
+            {
+                type: 'history_record',
+                question: 'NBA最長連勝紀錄是哪支球隊創下的？',
+                options: ['洛杉磯湖人（33連勝）', '波士頓塞爾提克（19連勝）', '金州勇士（24連勝）', '邁阿密熱火（27連勝）'],
+                answer: 0,
+                correct: '洛杉磯湖人（33連勝）'
             }
         ];
         
@@ -252,16 +408,6 @@ class BasketballGame {
         const submitAnswerBtn = document.getElementById('submitAnswer');
         if (submitAnswerBtn) {
             submitAnswerBtn.addEventListener('click', () => this.submitAnswer());
-        }
-        
-        const playAgainBtn = document.getElementById('playAgain');
-        if (playAgainBtn) {
-            playAgainBtn.addEventListener('click', () => this.playAgain());
-        }
-        
-        const backToHomeBtn = document.getElementById('backToHome');
-        if (backToHomeBtn) {
-            backToHomeBtn.addEventListener('click', () => this.backToHome());
         }
         
     }
@@ -458,12 +604,12 @@ class BasketballGame {
     // 顯示下一題按鈕
     showNextButton() {
         // 如果還有下一題，自動進入下一題
-        if (this.currentQuestion < this.questions.length - 1) {
+        if (this.currentQuestion < 4) { // 0-3是前4題，4是第5題
             setTimeout(() => {
                 this.nextQuestion();
             }, 2500);
         } else {
-            // 5題答完，顯示結果頁面
+            // 第5題答完，顯示結果頁面
             setTimeout(() => {
                 this.showResultPage();
             }, 2500);
@@ -479,51 +625,63 @@ class BasketballGame {
 
     // 顯示結果頁面
     showResultPage() {
-        this.showPage('resultPage');
+        // 隱藏遊戲頁面，顯示結果頁面
+        document.getElementById('gamePage').classList.remove('active');
+        document.getElementById('resultPage').classList.add('active');
         
-        // 顯示答對題數
-        document.getElementById('correctCount').textContent = this.correctAnswers;
+        // 更新最終分數
+        document.getElementById('finalScore').textContent = this.correctAnswers;
         
         // 根據答對題數決定禮物
-        let giftName = '';
+        let giftItem = '';
         
-        if (this.correctAnswers >= 4) {
-            // 答對4題以上：麥香紅茶 + 嗨啾
-            giftName = `🥤 麥香紅茶 + 🍬 ${this.correctAnswers} 顆嗨啾`;
-        } else if (this.correctAnswers > 0) {
-            // 答對1-3題：只有嗨啾
-            giftName = `🍬 ${this.correctAnswers} 顆嗨啾`;
+        if (this.correctAnswers === 5) {
+            // 答對5題：麥香紅茶 + 1顆嗨啾
+            giftItem = '🥤 麥香紅茶 + 🍬 1 顆嗨啾';
+        } else if (this.correctAnswers === 4) {
+            // 答對4題：只有麥香紅茶
+            giftItem = '🥤 麥香紅茶';
+        } else if (this.correctAnswers >= 1 && this.correctAnswers <= 3) {
+            // 答對1-3題：只有嗨啾（一題一顆）
+            giftItem = `🍬 ${this.correctAnswers} 顆嗨啾`;
         } else {
-            // 答對0題：鼓勵獎
-            giftName = '💪 加油券（下次再挑戰！）';
+            // 答對0題：什麼都沒有
+            giftItem = '很可惜，沒有獲得獎品';
         }
         
-        document.getElementById('giftName').textContent = giftName;
+        // 更新禮物內容
+        document.getElementById('giftItem').textContent = giftItem;
+        
+        // 綁定按鈕事件
+        document.getElementById('playAgain').onclick = () => this.playAgain();
+        document.getElementById('backToHome').onclick = () => this.backToHome();
     }
-
+    
     // 再玩一次
     playAgain() {
-        this.initializeGame();
+        // 重置遊戲狀態
         this.currentQuestion = 0;
-        this.score = 0;
         this.correctAnswers = 0;
-        this.isAnswered = false;
+        this.selectedAnswer = null;
         
-        this.showPage('gamePage');
-        this.displayQuestion();
-        this.updateScore();
-        this.updateProgress();
+        // 重新開始遊戲
+        this.init();
+        
+        // 切換回遊戲頁面
+        document.getElementById('resultPage').classList.remove('active');
+        document.getElementById('gamePage').classList.add('active');
     }
-
+    
     // 回到首頁
     backToHome() {
         window.location.href = 'index.html';
     }
 
 
+
     // 更新分數
     updateScore() {
-        document.getElementById('currentScore').textContent = this.score;
+        document.getElementById('currentScore').textContent = this.correctAnswers;
     }
 
     // 更新題目編號
