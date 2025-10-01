@@ -76,9 +76,9 @@ class BasketballGame {
                 type: 'guess_player',
                 image: 'Paul Clifton.jpg',
                 question: '這位球員以出色的控球技巧和關鍵時刻的表現著稱，曾多次入選全明星，請問他是誰？',
-                options: ['Chris Paul 克里斯·保羅', 'Russell Westbrook 羅素·衛斯特布魯克', 'John Wall 約翰·沃爾', 'Kyle Lowry 凱爾·洛瑞'],
+                options: ['Paul George保羅·喬治', 'Russell Westbrook 羅素·衛斯特布魯克', 'John Wall 約翰·沃爾', 'Kyle Lowry 凱爾·洛瑞'],
                 answer: 0,
-                correct: 'Chris Paul 克里斯·保羅'
+                correct: 'Paul George保羅·喬治'
             },
             {
                 type: 'guess_player',
